@@ -1,71 +1,71 @@
-#include <iostream>
+#include <iostream> //input 
 
 using namespace std;
-void intro();
-void getinput(int& father,int& mother, int& end);
-void displaysquare(int& father,int& mother);
-void loop(int& end);
+void intro(); //intro function
+void getinput(int& father,int& mother, int& end); //gets inputs
+void displaysquare(int& father,int& mother); //displays squares based off inputs
+void loop(int& end); //function for the loop
 
 int main()
 {
-	int father, mother, end;
-	end = 1;
-	do {
-		intro();
-		getinput(father,mother,end);
-		displaysquare(father,mother);
-		loop(end);
-	} while (end != 1);
+	int father, mother, end; // diclaire variables
+	end = 1; //starts loop
+	do { //start of loop
+		intro(); //intro
+		getinput(father,mother,end); // asks for imputs
+		displaysquare(father,mother); // displays squares
+		loop(end); // loops
+	} while (end != 1); // ends loop based off user input
 
 
 	return 0;
 }
 void intro() {
-	cout<<"this program will calculate the chances of having colorblindness\n";
+	cout<<"this program will calculate the chances of having colorblindness\n"; // opening sentence
 }
-void getinput(int& father,int& mother, int& end) {
-	cout<<"if the father is colorblind enter 1, if not press 2\n";
-	cin>>father;
-	cout<<"if the mother is colorblind press 1, if shes a silent carrier press 2, if not press 3\n";
-	cin>>mother;
+void getinput(int& father,int& mother, int& end) { //starts process of getting inputs
+	cout<<"if the father is colorblind enter 1, if not press 2\n"; //asks for father
+	cin>>father; // takes in answer
+	cout<<"if the mother is colorblind press 1, if shes a silent carrier press 2, if not press 3\n"; // asks for mother
+	cin>>mother; // takes in answer
 }
-void displaysquare(int& father,int& mother) {
-	if (father == 1 & mother == 1) {
+void displaysquare(int& father,int& mother) { //starts display function
+	if (father == 1 & mother == 1) { // punnett square if both father and mother a colorblind
 		cout << "              Xc       |        Y\n";
 		cout << "       ---------------------------------\n";
 		cout << "   Xc  |     XcXc      |       XcY     |\n";
 		cout << "----------------------------------------\n";
 		cout << "   Xc  |     XcXc      |       XcY     |\n";
 		cout << "       ---------------------------------\n";
-	} else if (father == 1 & mother == 2) {
+	} else if (father == 1 & mother == 2) { // punnett square if father is colorblind but mother is silent carrier
 		cout << "              Xc       |        Y\n";
 		cout << "       ---------------------------------\n";
 		cout << "   Xc  |     XcXc      |       XcY     |\n";
 		cout << "----------------------------------------\n";
 		cout << "   X   |     XcX       |       XY      |\n";
 		cout << "       ---------------------------------\n";
-	} else if (father == 1 & mother == 3) {
+	} else if (father == 1 & mother == 3) { // punnett square if father is colorblind and mother is not
 		cout << "              Xc       |        Y\n";
 		cout << "       ---------------------------------\n";
 		cout << "   X   |      XcX      |        XY     |\n";
 		cout << "----------------------------------------\n";
 		cout << "   X   |      XcX      |        XY     |\n";
 		cout << "       ---------------------------------\n";
-	} else if (father == 2 & mother == 1) {
+	} else if (father == 2 & mother == 1) { // punnett square if father is not colorblind but mother is colorblind
 		cout << "               X       |        Y\n";
 		cout << "       ---------------------------------\n";
 		cout << "   Xc  |      XXc      |       XcY     |\n";
 		cout << "----------------------------------------\n";
 		cout << "   Xc  |      XXc      |       XcY     |\n";
 		cout << "       ---------------------------------\n";
-	} else if (father == 2 & mother == 2) {
+	} else if (father == 2 & mother == 2) { // punnett square if father in not colorblind and mother is silent carrier
 		cout << "               X       |        Y\n";
 		cout << "       ---------------------------------\n";
 		cout << "   Xc  |      XXc      |       XcY     |\n";
 		cout << "----------------------------------------\n";
 		cout << "   X   |      XX       |       XY      |\n";
 		cout << "       ---------------------------------\n";
-	} else if (father == 2 & mother == 3) {
+	} else if (father == 2 & mother == 3) { // punnett square if father and mother is not colorblind
 		cout << "               X       |        Y\n";
 		cout << "       ---------------------------------\n";
 		cout << "   X   |       XX      |        XY     |\n";
@@ -73,14 +73,14 @@ void displaysquare(int& father,int& mother) {
 		cout << "   X   |       XX      |        XY     |\n";
 		cout << "       ---------------------------------\n";
 	} else {
-		cout << "Invalid inputs\n";
+		cout << "Invalid inputs\n"; // if answer is invalid
 	}
 }
-void loop(int& end) {
-	cout << "Would you like to run another simulation press 1 for yes, for no press any other key \n";
-	cin >> end;
-	if (end == 1) {
+void loop(int& end) { // end of loop
+	cout << "Would you like to run another simulation press 1 for yes, for no press any other key \n"; // asks if user would like to run another simulation
+	cin >> end; // takes in input for end loop
+	if (end == 1) { // if 1 then redoes loop
 
-	} else {
+	} else { // if not ends program
 	}
 }
