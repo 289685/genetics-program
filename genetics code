@@ -1,4 +1,4 @@
-#include <iostream> //input 
+#include <iostream> //input output
 
 using namespace std;
 void intro(); //intro function
