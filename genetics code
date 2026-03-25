@@ -15,7 +15,7 @@ int main()
 		getinput(father,mother,end); // asks for imputs
 		displaysquare(father,mother); // displays squares
 		loop(end); // loops
-	} while (end != 1); // ends loop based off user input
+	} while (end == 1); // ends loop based off user input
 
 
 	return 0;
