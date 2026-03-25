@@ -8,8 +8,8 @@ void loop(int& end); //function for the loop
 
 int main()
 {
-	int father, mother, end; // diclaire variables
-	end = 1; //starts loop
+	int father, mother, end; // declare variables
+	end = 1; //kick starts loop
 	do { //start of loop
 		intro(); //intro
 		getinput(father,mother,end); // asks for imputs
@@ -37,6 +37,8 @@ void displaysquare(int& father,int& mother) { //starts display function
 		cout << "----------------------------------------\n";
 		cout << "   Xc  |     XcXc      |       XcY     |\n";
 		cout << "       ---------------------------------\n";
+		cout << "50% chance your child will be a colorblind girl\n";
+		cout << "50% chance your child will be a colorblind boy\n";
 	} else if (father == 1 & mother == 2) { // punnett square if father is colorblind but mother is silent carrier
 		cout << "              Xc       |        Y\n";
 		cout << "       ---------------------------------\n";
@@ -44,6 +46,10 @@ void displaysquare(int& father,int& mother) { //starts display function
 		cout << "----------------------------------------\n";
 		cout << "   X   |     XcX       |       XY      |\n";
 		cout << "       ---------------------------------\n";
+		cout << "25% chance your child will be a colorblind girl\n";
+		cout << "25% chance you child will be a silent carrier girl\n";
+		cout << "25% chance your child will be a colorblind boy\n";
+		cout << "25% chance your child will be a non-colorblind boy\n";
 	} else if (father == 1 & mother == 3) { // punnett square if father is colorblind and mother is not
 		cout << "              Xc       |        Y\n";
 		cout << "       ---------------------------------\n";
@@ -51,6 +57,8 @@ void displaysquare(int& father,int& mother) { //starts display function
 		cout << "----------------------------------------\n";
 		cout << "   X   |      XcX      |        XY     |\n";
 		cout << "       ---------------------------------\n";
+		cout << "50% chance your child will be a silent carrier girl\n";
+		cout << "50% chance your child will be a non-colorblind boy\n";
 	} else if (father == 2 & mother == 1) { // punnett square if father is not colorblind but mother is colorblind
 		cout << "               X       |        Y\n";
 		cout << "       ---------------------------------\n";
@@ -58,6 +66,8 @@ void displaysquare(int& father,int& mother) { //starts display function
 		cout << "----------------------------------------\n";
 		cout << "   Xc  |      XXc      |       XcY     |\n";
 		cout << "       ---------------------------------\n";
+		cout << "50% chance your child will be a silent carrier girl\n";
+		cout << "50% chance your child will be a colorblind boy\n";
 	} else if (father == 2 & mother == 2) { // punnett square if father in not colorblind and mother is silent carrier
 		cout << "               X       |        Y\n";
 		cout << "       ---------------------------------\n";
@@ -65,6 +75,10 @@ void displaysquare(int& father,int& mother) { //starts display function
 		cout << "----------------------------------------\n";
 		cout << "   X   |      XX       |       XY      |\n";
 		cout << "       ---------------------------------\n";
+		cout << "25% chance your child will be a silent carrier girl\n";
+		cout << "25% chance your child will be a non-colorblind girl\n";
+		cout << "25% chance your child will be a colorblind boy\n";
+		cout << "25% chance your child will be a non-colorblind boy\n";
 	} else if (father == 2 & mother == 3) { // punnett square if father and mother is not colorblind
 		cout << "               X       |        Y\n";
 		cout << "       ---------------------------------\n";
@@ -72,6 +86,8 @@ void displaysquare(int& father,int& mother) { //starts display function
 		cout << "----------------------------------------\n";
 		cout << "   X   |       XX      |        XY     |\n";
 		cout << "       ---------------------------------\n";
+		cout << "50% chance your child will be a non-colorblind girl\n";
+		cout << "50% chance your child will be a non-colorblind boy\n";
 	} else {
 		cout << "Invalid inputs\n"; // if answer is invalid
 	}
